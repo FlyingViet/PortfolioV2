@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant light (&:where(.light, .light *));
+
 :root {
   --background: #09090b;
   --foreground: #f1f5f9;
@@ -9,6 +11,15 @@
   --surface-2: #18181b;
   --border: rgba(255, 255, 255, 0.08);
   --muted: #71717a;
+}
+
+.light {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --surface: #f1f5f9;
+  --surface-2: #e2e8f0;
+  --border: rgba(0, 0, 0, 0.08);
+  --muted: #64748b;
 }
 
 body {

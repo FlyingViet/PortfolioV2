@@ -17,8 +17,8 @@ export default function ShopPage() {
     <div className="max-w-6xl mx-auto px-6 py-12">
       {/* Header */}
       <div className="mb-10">
-        <h1 className="text-3xl font-bold text-white mb-2">Recommendations</h1>
-        <p className="text-zinc-400 max-w-xl">
+        <h1 className="text-3xl font-bold text-white light:text-zinc-900 mb-2">Recommendations</h1>
+        <p className="text-zinc-400 light:text-zinc-600 max-w-xl">
           Things I genuinely use and recommend. Links are Amazon affiliate links —
           you pay the same price, and I earn a small commission.
         </p>
@@ -33,7 +33,7 @@ export default function ShopPage() {
             className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
               activeCategory === cat
                 ? "bg-cyan-400 text-black"
-                : "border border-white/10 text-zinc-400 hover:text-white hover:border-white/20 bg-transparent"
+                : "border border-white/10 light:border-black/10 text-zinc-400 light:text-zinc-600 hover:text-white light:hover:text-zinc-900 hover:border-white/20 light:hover:border-black/20 bg-transparent"
             }`}
           >
             {cat}
@@ -46,23 +46,23 @@ export default function ShopPage() {
         {filtered.map((product) => (
           <div
             key={product.id}
-            className="group flex flex-col rounded-2xl border border-white/8 bg-zinc-900/40 hover:border-white/15 transition-all duration-300 overflow-hidden"
+            className="group flex flex-col rounded-2xl border border-white/8 light:border-black/8 bg-zinc-900/40 light:bg-white hover:border-white/15 light:hover:border-black/15 transition-all duration-300 overflow-hidden"
           >
             {/* Image */}
-            <div className="relative overflow-hidden bg-zinc-900">
+            <div className="relative overflow-hidden bg-zinc-900 light:bg-zinc-100">
               <img
                 src={product.imageUrl}
                 alt={product.name}
                 className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
               />
-              <span className="absolute top-3 left-3 px-2 py-0.5 rounded-full text-xs font-medium bg-black/60 text-zinc-300 backdrop-blur-sm border border-white/10">
+              <span className="absolute top-3 left-3 px-2 py-0.5 rounded-full text-xs font-medium bg-black/60 light:bg-white/80 text-zinc-300 light:text-zinc-700 backdrop-blur-sm border border-white/10 light:border-black/10">
                 {product.category}
               </span>
             </div>
 
             {/* Content */}
             <div className="flex flex-col flex-1 p-5">
-              <h3 className="text-white font-semibold mb-1.5 leading-snug">
+              <h3 className="text-white light:text-zinc-900 font-semibold mb-1.5 leading-snug">
                 {product.name}
               </h3>
               <p className="text-zinc-500 text-sm leading-relaxed flex-1 mb-4">

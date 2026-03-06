@@ -71,8 +71,8 @@ export default function PhotographyPage() {
     <div className="max-w-7xl mx-auto px-6 py-12">
       {/* Header */}
       <div className="mb-10">
-        <h1 className="text-3xl font-bold text-white mb-2">Photography</h1>
-        <p className="text-zinc-400 max-w-xl">
+        <h1 className="text-3xl font-bold text-white light:text-zinc-900 mb-2">Photography</h1>
+        <p className="text-zinc-400 light:text-zinc-600 max-w-xl">
           Moments I&apos;ve captured — nature, food, landscapes, and everything in between.
         </p>
       </div>
@@ -100,7 +100,7 @@ export default function PhotographyPage() {
                 className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
                   activeCategory === cat
                     ? "bg-cyan-400 text-black"
-                    : "border border-white/10 text-zinc-400 hover:text-white hover:border-white/20 bg-transparent"
+                    : "border border-white/10 light:border-black/10 text-zinc-400 light:text-zinc-600 hover:text-white light:hover:text-zinc-900 hover:border-white/20 light:hover:border-black/20 bg-transparent"
                 }`}
               >
                 {cat}
@@ -113,7 +113,7 @@ export default function PhotographyPage() {
             {filtered.map((photo) => (
               <div
                 key={photo.id}
-                className="break-inside-avoid group relative cursor-pointer overflow-hidden rounded-xl border border-white/8 hover:border-white/20 transition-all duration-300"
+                className="break-inside-avoid group relative cursor-pointer overflow-hidden rounded-xl border border-white/8 light:border-black/8 hover:border-white/20 light:hover:border-black/20 transition-all duration-300"
                 onClick={() => setLightboxPhoto(photo)}
               >
                 <img

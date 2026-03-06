@@ -86,11 +86,11 @@ export default function ResumePage() {
   return (
     <div className="max-w-4xl mx-auto px-6 py-12 print-page">
       {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-6 mb-10 pb-8 border-b border-white/8">
+      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-6 mb-10 pb-8 border-b border-white/8 light:border-black/8">
         <div>
-          <h1 className="text-4xl font-bold text-white mb-1">Brian Hoang</h1>
+          <h1 className="text-4xl font-bold text-white light:text-zinc-900 mb-1">Brian Hoang</h1>
           <p className="text-cyan-400 text-lg mb-3">Senior Software Engineer</p>
-          <div className="flex flex-wrap gap-x-4 gap-y-1 text-zinc-400 text-sm">
+          <div className="flex flex-wrap gap-x-4 gap-y-1 text-zinc-400 light:text-zinc-600 text-sm">
             <span>Mountain View, CA</span>
             <span>·</span>
             <a href="https://linkedin.com/in/brianthoang" className="hover:text-cyan-400 transition-colors">linkedin.com/in/brianthoang</a>
@@ -103,7 +103,7 @@ export default function ResumePage() {
 
         <button
           onClick={() => window.print()}
-          className="no-print self-start flex items-center gap-2 px-4 py-2 rounded-lg border border-white/10 bg-white/5 text-zinc-400 hover:text-white hover:bg-white/10 transition-all text-sm shrink-0"
+          className="no-print self-start flex items-center gap-2 px-4 py-2 rounded-lg border border-white/10 light:border-black/10 bg-white/5 light:bg-black/5 text-zinc-400 light:text-zinc-600 hover:text-white light:hover:text-zinc-900 hover:bg-white/10 light:hover:bg-black/10 transition-all text-sm shrink-0"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
@@ -115,7 +115,7 @@ export default function ResumePage() {
       {/* Summary */}
       <section className="mb-10">
         <h2 className="text-xs font-semibold uppercase tracking-widest text-cyan-400 mb-4">Summary</h2>
-        <p className="text-zinc-300 leading-relaxed">
+        <p className="text-zinc-300 light:text-zinc-700 leading-relaxed">
           Senior Software Engineer with 5+ years of experience building secure, scalable systems at LinkedIn,
           Meta, and Amazon. Proven track record of driving measurable impact — from increasing encrypted
           messaging onboarding by 60% at Meta to securing access to 180PB of Alexa data at Amazon.
@@ -131,9 +131,9 @@ export default function ResumePage() {
             <div key={i}>
               <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-2">
                 <div>
-                  <span className="text-white font-semibold">{job.role}</span>
+                  <span className="text-white light:text-zinc-900 font-semibold">{job.role}</span>
                   <span className="text-zinc-500 mx-2">·</span>
-                  <span className="text-zinc-300">{job.company}</span>
+                  <span className="text-zinc-300 light:text-zinc-700">{job.company}</span>
                 </div>
                 <div className="text-zinc-500 text-sm shrink-0">
                   {job.period} · {job.location}
@@ -142,7 +142,7 @@ export default function ResumePage() {
               {job.bullets.length > 0 && (
                 <ul className="space-y-1.5 pl-4">
                   {job.bullets.map((b, j) => (
-                    <li key={j} className="text-zinc-400 text-sm leading-relaxed flex gap-2">
+                    <li key={j} className="text-zinc-400 light:text-zinc-600 text-sm leading-relaxed flex gap-2">
                       <span className="text-cyan-400 mt-1.5 shrink-0">›</span>
                       {b}
                     </li>
@@ -161,9 +161,9 @@ export default function ResumePage() {
           {education.map((edu, i) => (
             <div key={i} className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
               <div>
-                <span className="text-white font-semibold">{edu.degree}</span>
+                <span className="text-white light:text-zinc-900 font-semibold">{edu.degree}</span>
                 <span className="text-zinc-500 mx-2">·</span>
-                <span className="text-zinc-300">{edu.school}</span>
+                <span className="text-zinc-300 light:text-zinc-700">{edu.school}</span>
                 {edu.detail && (
                   <p className="text-zinc-500 text-sm mt-1">{edu.detail}</p>
                 )}
@@ -187,7 +187,7 @@ export default function ResumePage() {
                 {group.items.map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1 rounded-md text-sm text-zinc-300 border border-white/8 bg-white/4"
+                    className="px-3 py-1 rounded-md text-sm text-zinc-300 light:text-zinc-700 border border-white/8 light:border-black/8 bg-white/4 light:bg-black/4"
                   >
                     {skill}
                   </span>
