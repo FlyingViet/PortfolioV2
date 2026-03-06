@@ -3,7 +3,7 @@ import "./globals.css";
 import Nav from "@/components/Nav";
 
 export const metadata: Metadata = {
-  title: "YourName | Portfolio",
+  title: "Brian Hoang | Portfolio",
   description: "Personal portfolio — resume, photography, and recommendations.",
 };
 
