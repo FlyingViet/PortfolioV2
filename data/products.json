@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "name": "JISULIFE Portable Handheld Fan Ultra2",
+    "description": "9000mAh battery with up to 25 hrs of runtime, 100 speed settings, built-in 18W power bank, flashlight, and metal shell. A must-have for staying cool at festivals.",
+    "imageUrl": "https://m.media-amazon.com/images/I/61FIQp14q6L._AC_SL1500_.jpg",
+    "affiliateUrl": "https://amzn.to/4rLy1F2",
+    "category": "Rave Essentials",
+    "price": "$89.99"
+  },
+  {
+    "id": 2,
+    "name": "SenseCAP Card Tracker T1000-E",
+    "description": "Credit card-sized Meshtastic tracker — only 6.5mm thick. GPS, IP65 waterproof, 700mAh battery, and up to 10km range. Track your squad across the festival grounds without cell service.",
+    "imageUrl": "https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114993369-sensecap-card-tracker-t1000-e-for-meshtastic.jpg",
+    "affiliateUrl": "https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-Meshtastic-p-5913.html",
+    "category": "Rave Essentials",
+    "price": "$39.90"
+  },
+  {
+    "id": 3,
+    "name": "K-MingleSo Portable Folding Stool",
+    "description": "Lightweight 1.7 lb camping stool with a 13\" seat height and 450 lb capacity. 600D Oxford fabric, steel frame, built-in side pocket, and carry bag included. Perfect for long festival sets.",
+    "imageUrl": "https://m.media-amazon.com/images/I/61cV8pYb28L._AC_SL1500_.jpg",
+    "affiliateUrl": "https://amzn.to/4b3wMKg",
+    "category": "Rave Essentials",
+    "price": "18.88"
+  }
+]
