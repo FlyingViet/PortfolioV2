@@ -1,5 +1,7 @@
 "use client";
 
+import { projects } from "@/data/projects";
+
 const experience = [
   {
     company: "LinkedIn",
@@ -149,6 +151,38 @@ export default function ResumePage() {
                   ))}
                 </ul>
               )}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Projects */}
+      <section className="mb-10">
+        <h2 className="text-xs font-semibold uppercase tracking-widest text-cyan-400 mb-6">Projects</h2>
+        <div className="space-y-8">
+          {projects.map((project) => (
+            <div key={project.slug}>
+              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-1">
+                <div>
+                  <span className="text-white light:text-zinc-900 font-semibold">{project.name}</span>
+                  <span className="text-zinc-500 mx-2">·</span>
+                  <a href={project.url} className="text-zinc-300 light:text-zinc-700 hover:text-cyan-400 transition-colors">
+                    {project.urlLabel}
+                  </a>
+                </div>
+                <div className="text-zinc-500 text-sm shrink-0">{project.period}</div>
+              </div>
+              <p className="text-zinc-500 text-sm mb-2">
+                {project.role} · {project.tech.join(", ")}
+              </p>
+              <ul className="space-y-1.5 pl-4">
+                {project.resumeBullets.map((b, j) => (
+                  <li key={j} className="text-zinc-400 light:text-zinc-600 text-sm leading-relaxed flex gap-2">
+                    <span className="text-cyan-400 mt-1.5 shrink-0">›</span>
+                    {b}
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>

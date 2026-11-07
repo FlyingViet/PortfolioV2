@@ -4,7 +4,7 @@ import Nav from "@/components/Nav";
 
 export const metadata: Metadata = {
   title: "Brian Hoang | Portfolio",
-  description: "Personal portfolio — resume, photography, and recommendations.",
+  description: "Personal portfolio — resume, projects, and recommendations.",
 };
 
 export default function RootLayout({
